@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Go Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../CSS/homepage.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/payment.css">
+    <script src="https://kit.fontawesome.com/2cfefaba62.js" crossorigin="anonymous"></script>
+    <script src="../JS/payment.js"></script>
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="logo"><i class="fas fa-store-alt"></i>pokemon go store</a>
+        
+        <nav class="navbar">
+            <a  href="../../index.html">home</a>
+            <a href="#store">store</a>
+            <a href="#about"> About</a>
+            <a href="#review">review</a>
+            <a href="#order">order</a>
+        </nav>
+    
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="./cart.html" class="fas fa-shopping-cart custom-class"></a>
+        </div>
+        <div class="iconProfile">
+    
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const profile = localStorage.getItem("CurrentLoginEmail");
+    
+                if (profile) {
+                    // If profile exists (user is logged in), show sign out and profile links
+                    document.querySelector('.iconProfile').innerHTML = `
+                        <a href="../../index.html" class="logout">Logout</a>
+                        <a href="./profile.html" class="sign-icons">Profile</a>
+                    `;
+                } else {
+                    // If profile doesn't exist (user is not logged in), show sign up and sign in links
+                    document.querySelector('.iconProfile').innerHTML = `
+                        <a href="./registration.html" class="sign-icons">Sign Up</a>
+                        <a href="./login.html" class="sign-icons">Sign In</a>
+                    `;
+                }
+            });
+        </script>
+        
+    </header>
+    
+    <!-- search form -->
+    <form action="" id="search-form">
+        <input type="search" placeholder="Search" name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+    
+    <!--Billing form-->
+    <div class="container">
+        <h2>Checkout Form</h2>
+        <form id="checkoutForm" class="form-container">
+            <div class="form-group-1">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+    
+            <div class="form-group-2">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+    
+            <div class="form-group-3">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+    
+            <div class="form-group-4">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+    
+            <div class="form-group-5">
+                <label for="paymentMethod">Payment Method</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="">Select Payment Method</option>
+                    <option value="credit">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+            </div>
+    
+            <div class="credit-card-info">
+                <div class="form-group-6">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" name="cardNumber" required>
+                </div>
+    
+                <div class="form-row">
+                    <div class="form-group-7">
+                        <label for="expiryDate">Expiration Date</label>
+                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
+                    </div>
+    
+                    <div class="form-group-8">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" maxlength="3" required>
+                    </div>
+                </div>
+            </div>
+    
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+
+<script src="../JS/payment.js"></script>
+
+</body>
+</html>

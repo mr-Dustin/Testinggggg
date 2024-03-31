@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Go Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./Assets/CSS/homepage.css">
+    <link rel="stylesheet" href="./Assets/CSS/footer.css">
+    <script src="https://kit.fontawesome.com/2cfefaba62.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+    <a href="#" class="logo"><i class="fas fa-store-alt"></i>pokemon go store</a>
+    
+    <nav class="navbar">
+        <a class="active" href="#home">home</a>
+        <a href="#store">store</a>
+        <a href="#about"> About</a>
+        <a href="#review">review</a>
+        <a href="#order">order</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="./Assets/WebPages/cart.html" class="fas fa-shopping-cart"></a>
+    </div>
+    <div class="iconProfile">
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const profile = localStorage.getItem("CurrentLoginEmail");
+            if (profile) {
+                // If profile exists (user is logged in), show sign out and profile links
+                document.querySelector('.iconProfile').innerHTML = `
+                    <a href="index.html" class="logout">Logout</a>
+                    <a href="./Assets/WebPages/profile.html" class="sign-icons">Profile</a>
+                `;
+            } else {
+                // If profile doesn't exist (user is not logged in), show sign up and sign in links
+                document.querySelector('.iconProfile').innerHTML = `
+                    <a href="./Assets/WebPages/registration.html" class="sign-icons">Sign Up</a>
+                    <a href="./Assets/WebPages/login.html" class="sign-icons">Sign In</a>
+                `;
+            }
+        });
+    </script>
+    
+</header>
+
+<!-- search form -->
+<form action="" id="search-form">
+    <input type="search" placeholder="Search Food" name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!-- home section -->
+
+<section class="home" id="home">
+    <div class="swiper home-slider">
+        <div class="swiper-wrapper wrapper">
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Our Famous Pokemons</span>
+                    <h3>Pikachu</h3>
+                    <p>
+                        Pikachu is an iconic Electric-type Pokémon known for its yellow fur, red cheeks with electric sacs, and a lightning bolt-shaped tail. It is the mascot of the Pokémon franchise and one of the most recognizable characters worldwide. Pikachu evolves from Pichu and evolves into Raichu. It is known for its agility, cuteness, and its signature move, Thunderbolt.</p>
+                        <button id="buyButton" class="btn">Buy Now!</button>
+                </div>
+                <div class="image">
+                    <img src="./Assets/Images/pikachu.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Our Famous Pokemons</span>
+                    <h3>bulbasur</h3>
+                    <p>Bulbasaur is a dual-type Grass/Poison Pokémon characterized by its blue-green skin, bulb on its back, and large, bright red eyes. It is the first Pokémon in the Pokédex and one of the starter Pokémon in the original Pokémon games. Bulbasaur evolves into Ivysaur and then into Venusaur. It is known for its balanced stats, ability to learn a variety of moves, and its supportive role in battles.</p>
+                    <button id="buyButton" class="btn">Buy Now!</button>
+                </div>
+                <div class="image">
+                    <img src="./Assets/Images/bulb.png" alt="">
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Our Famous Pokemons</span>
+                    <h3>Charizard</h3>
+                    <p>Charizard is a dual-type Fire/Flying Pokémon, resembling a large, orange dragon with wings and a flame-tipped tail. It is the final evolution of Charmander, one of the starter Pokémon in the original games. Charizard is known for its immense power, ability to breathe fire, and its iconic appearance. It is a fan-favorite Pokémon and often featured prominently in Pokémon media and merchandise.</p>
+                    <button id="buyButton" class="btn">Buy Now!</button>
+                </div>
+                <div class="image">
+                    <img src="./Assets/Images/chars.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- Dishes section -->
+
+<section class="store" id="store">
+    <h3 class="sub-heading">Our Pokecoins</h3>
+    <h1 class="heading">Popular Purchased</h1>
+
+    <div class="box-container">
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <a href="#" class="fas fa-eye"></a>
+            <img class="img" src="./Assets/Images/500coins.webp">
+            <h3>500 Pokecoins</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱550</span>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <a href="#" class="fas fa-eye"></a>
+            <img class="img" src="./Assets/Images/1500coins.webp">
+            <h3>1300 Pokecoins</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <span>₱1350</span>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <a href="#" class="fas fa-eye"></a>
+            <img class="img" src="./Assets/Images/1200 pokécoins.webp">
+            <h3>2500 pokecoins</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱3000</span>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <a href="#" class="fas fa-eye"></a>
+            <img class="img" src="./Assets/Images/3000coins.webp">
+            <h3>5000 pokecoins</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱5500</span>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+        
+        <div class="box">
+            <a href="#" class="fas fa-heart"></a> 
+            <a href="#" class="fas fa-eye"></a>
+            <img class="img" src="./Assets/Images/10000coins.webp">
+            <h3>10000 pokecoins</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱11,000</span>
+            <button id="buyButton" class="btn">add to cart</button>
+        </div>
+
+</section>
+
+<!-- About Section -->
+
+<section class="about" id="about">
+    <h3 class="sub-heading">About Us</h3>
+    <h1 class="heading">Why Choose Us?</h1>
+
+    <div class="row">
+        <div class="image">
+            <img src="./Assets/Images/blastoise.png" alt="">
+        </div>
+
+        <div class="content">
+            <h3>Best Pokemon Go store in the country</h3>
+            <p>Embark on an epic digital adventure with us at our Pokémon GO Online Store. Born from a deep love for the Pokémon universe and a passion for gaming, our store is your virtual gateway to the exciting world of Pokémon GO.
+
+            At our online store, we're dedicated to providing trainers with everything they need to conquer gyms, catch rare Pokémon, and become true Pokémon Masters, all from the comfort of their own screens. Whether you're battling in raids, completing research tasks, or exploring the latest in-game events, we've got you covered with a wide range
+                
+            of virtual items and services tailored to enhance your Pokémon GO experience.
+                
+            From virtual Poké Balls and potions to special event passes and in-game currency, our store offers a diverse selection of digital products to aid you on your journey.</p>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>Speed Transaction</span>
+                </div>
+
+                <div class="icons">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>free Pokepoints</span>
+                </div>
+
+                <div class="icons">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 service</span>
+                </div>
+            </div>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Loader part -->
+
+<div class="loader-container">
+    <img src="./Assets/Images/pika.gif" alt="">
+</div>
+
+<!-- footer part -->
+<body>
+    <footer>
+        <div class="row">
+            <div class="col">
+                <img src="./Assets/Images/pika.gif" class="logo">
+                <p>Pokémon GO is playable in English, French, German, Italian, Russian, Japanese, Spanish, Traditional Chinese, Korean, Thai, Brazillian Portuguese, Turkish, and Indonesian.
+                </p>
+            </div>
+            <div class="col">
+                <h3>School <div class="underline"><span></span></div></h3>
+                <p>Padre Paredes St.</p>
+                <p>Sampaloc, Manila</p>
+                <p>1015 Metro Manila</p>
+                <p class="email-id">info@feutech.edu.ph</p>
+                <h4>+63 - 0953 194 3900</h4>
+            </div>
+            <div class="col">
+                <h3>Links <div class="underline"><span></span></div></h3>
+               <ul>
+                <li><a href="https://pokemongolive.com/" target="_blank" rel="noopener noreferrer">Pokémon GO Live</a></li>
+                <li><a href="https://pokemongolive.com/leaderboard" target="_blank" rel="noopener noreferrer">Leaderboard</a></li>
+                <li><a href="https://pokemongolive.com/events" target="_blank" rel="noopener noreferrer">Events</a></li>
+                <li><a href="https://pokemongolive.com/community-day/map" target="_blank" rel="noopener noreferrer">Community Day Map</a></li>
+                <li><a href="">Contacts</a></li>
+               </ul>
+            </div>
+            <div class="col">
+                <h3>Newsletter <div class="underline"><span></span></div></h3>
+                <form>
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email id" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/PokemonGO/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/pokemongoapp/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@pokemongo" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">"In compliance with copyright regulations, the images used herein are the property of Niantic. This project is for educational purposes only, and no copyright infringement is intended."</p>
+    </footer>
+</body>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./Assets/JS/homepage.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const buyButtons = document.querySelectorAll('.btn');
+            // Define an object to map product names to image paths
+            const imagePaths = {
+                "Pikachu": "./Assets/Images/pikachu.png",
+                "bulbasur": "./Assets/Images/bulb.png",
+                "Charizard": "./Assets/Images/chars.png",
+                "500 Pokecoins": "./Assets/Images/500coins.webp",
+                "1300 Pokecoins": "./Assets/Images/1500coins.webp",
+                "2500 pokecoins": "./Assets/Images/1200 pokécoins.webp",
+                "5000 pokecoins": "./Assets/Images/3000coins.webp",
+                "10000 pokecoins": "./Assets/Images/10000coins.webp"
+            };
+
+            buyButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const playerEmail = localStorage.getItem("CurrentLogin");
+                    const productBox = this.parentElement;
+                    const productName = productBox.querySelector('h3').textContent;
+                    const productPrice = productBox.querySelector('span').textContent;
+                    // Retrieve image path from the imagePaths object
+                    const productImage = imagePaths[productName];
+                    
+                    // Assuming you have already defined the product prices in your script
+                    const prices = {
+                        "Pikachu": "₱1500",
+                        "bulbasur": "₱1000",
+                        "Charizard": "₱2000",
+                        "500 Pokecoins": "₱550",
+                        "1300 Pokecoins": "₱1350",
+                        "2500 pokecoins": "₱3000",
+                        "5000 pokecoins": "₱5500",
+                        "10000 pokecoins": "₱11000"
+                    };
+        
+                    // Save to local storage
+                    const cartItem = {
+                        name: productName,
+                        price: prices[productName],
+                        image: productImage
+                    };
+        
+                    // Retrieve existing cart items or initialize an empty array
+                    let cartItems = localStorage.getItem(`${playerEmail}CartItems`) ? localStorage.getItem(`${playerEmail}CartItems`).split(';') : [];
+                    cartItems.push(`${cartItem.name},${cartItem.price},${cartItem.image}`);
+                    localStorage.setItem(`${playerEmail}CartItems`, cartItems.join(';'));
+        
+                    // Optional: Provide feedback to the user (e.g., show a message)
+                    alert('Item added to cart successfully!');
+                    window.location.href = "./Assets/WebPages/cart.html"
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const logoutButton = document.querySelector('.logout');
+    
+            logoutButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                localStorage.removeItem('CurrentLoginEmail');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+    <script>
+        // Fetch and insert header
+        fetch('./Assets/WebPages/header.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('header').innerHTML = data;
+          });
+        
+        // Fetch and insert footer
+        fetch('./Assets/WebPages/footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer').innerHTML = data;
+          });
+        </script>
+</body>
+</html>

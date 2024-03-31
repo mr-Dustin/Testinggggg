@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: 50px auto 10px auto; /* Center horizontally and adjust 10px below */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Optional: Background color for the container */
+}
+
+/* Flexbox container for form groups */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch; /* Stretch form groups vertically */
+}
+
+/* Apply specific styles for each form group */
+.form-group-1,
+.form-group-2,
+.form-group-3,
+.form-group-4,
+.form-group-5,
+.form-group-6,
+.form-group-7,
+.form-group-8,
+.form-group-9 {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between fields */
+}
+
+.form-group-7,
+.form-group-8,
+.form-group-9 {
+    flex-grow: 1;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+select#paymentMethod {
+    width: calc(100% - 16px); /* Adjust as needed based on padding and border */
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px auto; /* Adjust margin for smaller screens */
+    }
+}
